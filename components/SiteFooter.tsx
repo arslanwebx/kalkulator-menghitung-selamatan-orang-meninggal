@@ -40,12 +40,6 @@ export function SiteFooter() {
               halo@kalkulatorselamatanorangmeninggal.pro
             </a>
           </div>
-          <div className="footer-contact-item">
-            <span>Situs web</span>
-            <a href="https://kalkulatorselamatanorangmeninggal.pro/">
-              kalkulatorselamatanorangmeninggal.pro
-            </a>
-          </div>
           <Link className="footer-contact-link" href="/hubungi-kami/">
             Buka halaman kontak
           </Link>

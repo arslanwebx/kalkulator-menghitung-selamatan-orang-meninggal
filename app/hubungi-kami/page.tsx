@@ -57,8 +57,7 @@ export default function ContactPage() {
               langsung ke:
             </p>
             <a href="mailto:halo@kalkulatorselamatanorangmeninggal.pro">
-              <span>halo@</span>
-              <span>kalkulatorselamatanorangmeninggal.pro</span>
+              halo@kalkulatorselamatanorangmeninggal.pro
             </a>
 
             <div className="contact-expectations">

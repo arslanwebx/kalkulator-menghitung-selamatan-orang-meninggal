@@ -1374,7 +1374,7 @@ tbody tr:last-child td {
 
 .contact-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1.45fr) minmax(300px, 0.75fr);
+  grid-template-columns: minmax(0, 1.3fr) minmax(390px, 0.85fr);
   align-items: start;
   gap: 26px;
 }
@@ -1516,14 +1516,10 @@ tbody tr:last-child td {
 
 .contact-info-card > a {
   display: block;
+  overflow-wrap: anywhere;
   color: var(--forest);
   font-size: 0.82rem;
   font-weight: 750;
-}
-
-.contact-info-card > a span {
-  display: block;
-  overflow-wrap: normal;
 }
 
 .contact-expectations {
