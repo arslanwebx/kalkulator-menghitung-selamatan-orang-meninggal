@@ -70,7 +70,7 @@ const schema = {
       "@id": `${canonicalUrl}#tabel-hitungan-image`,
       name: "Tabel Hitungan Orang Meninggal",
       caption:
-        "Ringkasan tahapan selamatan, istilah Jawa, hari ke-, dan tambahan hari menggunakan metode inklusif.",
+        "Tabel hitungan orang meninggal dengan tahapan selamatan, istilah Jawa, hari ke-, tambahan hari, dan keterangan metode inklusif.",
       contentUrl: `${canonicalUrl}images/tabel-hitungan-orang-meninggal.webp`,
       url: `${canonicalUrl}images/tabel-hitungan-orang-meninggal.webp`,
       width: 1536,
@@ -158,15 +158,15 @@ export default function Home() {
             <figure className="calculation-table-figure">
               <Image
                 src="/images/tabel-hitungan-orang-meninggal.webp"
-                alt="Tabel hitungan orang meninggal: Geblag hari ke-1, Nelung Dina hari ke-3, Mitung Dina hari ke-7, Matangpuluh hari ke-40, Nyatus hari ke-100, Pendhak Pisan, Pendhak Pindho, dan Nyewu hari ke-1000."
+                alt="Tabel hitungan orang meninggal dengan metode inklusif: Geblag hari ke-1, Nelung Dina hari ke-3, Mitung Dina hari ke-7, Matangpuluh hari ke-40, Nyatus hari ke-100, Pendhak Pisan sekitar 354 hari, Pendhak Pindho sekitar 708 hari, dan Nyewu hari ke-1000."
                 width={1536}
                 height={1024}
                 sizes="(max-width: 800px) calc(100vw - 40px), 760px"
               />
               <figcaption>
                 Tabel hitungan orang meninggal dengan metode inklusif, meliputi
-                tahapan, istilah Jawa, hari ke-, dan jumlah hari yang
-                ditambahkan.
+                tahapan, istilah Jawa, hari ke-, tambahan hari, dan keterangan
+                untuk setiap tahapan.
               </figcaption>
             </figure>
             <p className="inline-note">
