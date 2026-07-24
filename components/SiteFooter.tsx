@@ -48,8 +48,10 @@ export function SiteFooter() {
         </div>
       </div>
       <div className="footer-bottom">
-        <span>© {new Date().getFullYear()} Kalkulator Selamatan</span>
-        <span>kalkulatorselamatanorangmeninggal.pro</span>
+        <span>
+          © {new Date().getFullYear()} Kalkulator Selamatan — Seluruh hak cipta
+          dilindungi — kalkulatorselamatanorangmeninggal.pro
+        </span>
       </div>
     </footer>
   );
