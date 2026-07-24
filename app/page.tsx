@@ -391,7 +391,7 @@ export default function Home() {
         </div>
       </main>
 
-      <SiteFooter homePage />
+      <SiteFooter />
 
       <script
         type="application/ld+json"

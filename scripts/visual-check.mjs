@@ -111,7 +111,7 @@ try {
     { slug: "about", url: `${siteUrl}tentang-kami/` },
   ]) {
     for (const width of [375, 1440]) {
-      const height = width === 1440 ? 1500 : 1800;
+      const height = width === 1440 ? 1900 : 3000;
       const metrics = await capture(
         width,
         height,
@@ -172,6 +172,37 @@ try {
   });
   process.stdout.write(`contact ajax loading ${ajaxLoading.result.value}\n`);
   process.stdout.write(`contact ajax finish ${ajaxFinish.result.value}\n`);
+
+  await send("Runtime.evaluate", {
+    expression: `(() => {
+      const form = document.querySelector('.footer-newsletter');
+      form.querySelector('[name="email"]').value = 'langganan@example.com';
+      form.requestSubmit();
+    })()`,
+  });
+  await wait(80);
+  const newsletterLoading = await send("Runtime.evaluate", {
+    expression: `JSON.stringify({
+      disabled: document.querySelector('.footer-newsletter button').disabled,
+      buttonText: document.querySelector('.footer-newsletter button').textContent.trim()
+    })`,
+    returnByValue: true,
+  });
+  await wait(420);
+  const newsletterFinish = await send("Runtime.evaluate", {
+    expression: `JSON.stringify({
+      disabled: document.querySelector('.footer-newsletter button').disabled,
+      status: document.querySelector('#newsletter-status').textContent.trim(),
+      emailAfterSuccess: document.querySelector('#newsletter-email').value
+    })`,
+    returnByValue: true,
+  });
+  process.stdout.write(
+    `newsletter ajax loading ${newsletterLoading.result.value}\n`,
+  );
+  process.stdout.write(
+    `newsletter ajax finish ${newsletterFinish.result.value}\n`,
+  );
 
   await send("Emulation.setDeviceMetricsOverride", {
     width: 375,

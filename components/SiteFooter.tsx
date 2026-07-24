@@ -1,18 +1,13 @@
 import Link from "next/link";
 
+import { FooterNewsletter } from "@/components/FooterNewsletter";
 import { Logo } from "@/components/Logo";
 
-type SiteFooterProps = {
-  homePage?: boolean;
-};
-
-export function SiteFooter({ homePage = false }: SiteFooterProps) {
-  const anchor = (id: string) => (homePage ? `#${id}` : `/#${id}`);
-
+export function SiteFooter() {
   return (
     <footer className="site-footer">
       <div className="footer-inner">
-        <div>
+        <div className="footer-brand-column">
           <Link href="/" className="brand-link" aria-label="Kalkulator Selamatan, beranda">
             <Logo />
           </Link>
@@ -20,14 +15,41 @@ export function SiteFooter({ homePage = false }: SiteFooterProps) {
             Alat bantu menghitung jadwal selamatan, hari, dan Pasaran Jawa
             langsung di perangkat Anda.
           </p>
+          <FooterNewsletter />
         </div>
-        <nav aria-label="Navigasi footer">
-          <Link href={anchor("kalkulator")}>Kalkulator</Link>
-          <Link href={anchor("tabel-hitungan")}>Tabel Hitungan</Link>
-          <Link href={anchor("faq")}>FAQ</Link>
-          <Link href="/tentang-kami/">Tentang Kami</Link>
-          <Link href="/hubungi-kami/">Hubungi Kami</Link>
-        </nav>
+
+        <div className="footer-links-column">
+          <h2>Informasi</h2>
+          <ul>
+            <li><Link href="/tentang-kami/">Tentang Kami</Link></li>
+            <li><Link href="/hubungi-kami/">Hubungi Kami</Link></li>
+            <li><span aria-disabled="true">Kebijakan Privasi</span></li>
+            <li><span aria-disabled="true">Syarat dan Ketentuan</span></li>
+            <li><span aria-disabled="true">Penafian</span></li>
+          </ul>
+        </div>
+
+        <div className="footer-contact-column">
+          <h2>Kontak</h2>
+          <p>
+            Pertanyaan, koreksi, atau masukan dapat dikirim melalui email.
+          </p>
+          <div className="footer-contact-item">
+            <span>Email</span>
+            <a href="mailto:halo@kalkulatorselamatanorangmeninggal.pro">
+              halo@kalkulatorselamatanorangmeninggal.pro
+            </a>
+          </div>
+          <div className="footer-contact-item">
+            <span>Situs web</span>
+            <a href="https://kalkulatorselamatanorangmeninggal.pro/">
+              kalkulatorselamatanorangmeninggal.pro
+            </a>
+          </div>
+          <Link className="footer-contact-link" href="/hubungi-kami/">
+            Buka halaman kontak
+          </Link>
+        </div>
       </div>
       <div className="footer-bottom">
         <span>© {new Date().getFullYear()} Kalkulator Selamatan</span>
