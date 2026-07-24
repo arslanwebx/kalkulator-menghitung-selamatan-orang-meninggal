@@ -24,6 +24,8 @@ export function SiteFooter() {
             <li><Link href="/tentang-kami/">Tentang Kami</Link></li>
             <li><Link href="/hubungi-kami/">Hubungi Kami</Link></li>
             <li><Link href="/kebijakan-privasi/">Kebijakan Privasi</Link></li>
+            <li><Link href="/kebijakan-cookie/">Kebijakan Cookie</Link></li>
+            <li><Link href="/kebijakan-editorial/">Kebijakan Editorial</Link></li>
             <li><Link href="/syarat-dan-ketentuan/">Syarat dan Ketentuan</Link></li>
             <li><Link href="/penafian/">Penafian</Link></li>
           </ul>

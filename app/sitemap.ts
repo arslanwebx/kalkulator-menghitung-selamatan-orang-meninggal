@@ -25,6 +25,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.3,
     },
     {
+      url: "https://kalkulatorselamatanorangmeninggal.pro/kebijakan-cookie/",
+      changeFrequency: "yearly",
+      priority: 0.3,
+    },
+    {
+      url: "https://kalkulatorselamatanorangmeninggal.pro/kebijakan-editorial/",
+      changeFrequency: "yearly",
+      priority: 0.3,
+    },
+    {
       url: "https://kalkulatorselamatanorangmeninggal.pro/syarat-dan-ketentuan/",
       changeFrequency: "yearly",
       priority: 0.3,
