@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Kalkulator Selamatan</title>
+  <desc id="desc">Hitung tanggal, hari, dan Pasaran Jawa secara mudah</desc>
+  <rect width="1200" height="630" fill="#f7f3e9"/>
+  <rect x="64" y="62" width="1072" height="506" rx="28" fill="#fffdf8" stroke="#d9e0da" stroke-width="2"/>
+  <rect x="90" y="90" width="82" height="82" rx="18" fill="#174c3a"/>
+  <rect x="105" y="106" width="52" height="50" rx="8" fill="#fffdf8"/>
+  <path d="M105 122h52M118 102v11M144 102v11" fill="none" stroke="#174c3a" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="115" cy="132" r="3" fill="#b78c3d"/>
+  <circle cx="126" cy="132" r="3" fill="#b78c3d"/>
+  <circle cx="137" cy="132" r="3" fill="#b78c3d"/>
+  <circle cx="148" cy="132" r="3" fill="#b78c3d"/>
+  <path d="m119 143 7 7 18-19" fill="none" stroke="#174c3a" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="192" y="143" fill="#174c3a" font-family="Plus Jakarta Sans,Segoe UI,sans-serif" font-size="35" font-weight="700">Kalkulator Selamatan</text>
+  <text x="90" y="282" fill="#10382a" font-family="Plus Jakarta Sans,Segoe UI,sans-serif" font-size="64" font-weight="750">
+    <tspan x="90" dy="0">Hitung jadwal selamatan</tspan>
+    <tspan x="90" dy="78">dengan Pasaran Jawa</tspan>
+  </text>
+  <text x="90" y="470" fill="#5f716a" font-family="Plus Jakarta Sans,Segoe UI,sans-serif" font-size="30">
+    3 • 7 • 40 • 100 • Pendhak • 1000 hari
+  </text>
+  <rect x="90" y="507" width="476" height="5" rx="2.5" fill="#b78c3d"/>
+  <g transform="translate(883 255)">
+    <circle cx="0" cy="0" r="126" fill="#e8f0eb"/>
+    <circle cx="-62" cy="-8" r="13" fill="#b78c3d"/>
+    <circle cx="-31" cy="-8" r="13" fill="#b78c3d"/>
+    <circle cx="0" cy="-8" r="13" fill="#b78c3d"/>
+    <circle cx="31" cy="-8" r="13" fill="#b78c3d"/>
+    <circle cx="62" cy="-8" r="13" fill="#b78c3d"/>
+    <path d="m-48 45 30 30 76-92" fill="none" stroke="#174c3a" stroke-width="17" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>
