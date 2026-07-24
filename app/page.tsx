@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import { Calculator } from "@/components/Calculator";
 import { Faq } from "@/components/Faq";
 import { CheckIcon } from "@/components/icons";
@@ -47,6 +49,21 @@ const schema = {
       inLanguage: "id-ID",
       isPartOf: { "@id": `${canonicalUrl}#website` },
       mainEntity: { "@id": `${canonicalUrl}#application` },
+      primaryImageOfPage: { "@id": `${canonicalUrl}#tabel-hitungan-image` },
+    },
+    {
+      "@type": "ImageObject",
+      "@id": `${canonicalUrl}#tabel-hitungan-image`,
+      name: "Tabel Hitungan Orang Meninggal",
+      caption:
+        "Ringkasan tahapan selamatan, istilah Jawa, hari ke-, dan tambahan hari menggunakan metode inklusif.",
+      contentUrl: `${canonicalUrl}images/tabel-hitungan-orang-meninggal.webp`,
+      url: `${canonicalUrl}images/tabel-hitungan-orang-meninggal.webp`,
+      width: 1536,
+      height: 1024,
+      encodingFormat: "image/webp",
+      inLanguage: "id-ID",
+      representativeOfPage: true,
     },
     {
       "@type": "WebApplication",
@@ -79,17 +96,6 @@ const schema = {
     },
   ],
 };
-
-const staticRows = [
-  ["Hari wafat", "Geblag", "1", "0"],
-  ["Tiga hari", "Nelung Dina", "3", "2"],
-  ["Tujuh hari", "Mitung Dina", "7", "6"],
-  ["Empat puluh hari", "Matangpuluh", "40", "39"],
-  ["Seratus hari", "Nyatus", "100", "99"],
-  ["Satu tahun Jawa", "Pendhak Pisan", "Berdasarkan kalender Jawa", "Bervariasi"],
-  ["Dua tahun Jawa", "Pendhak Pindho", "Berdasarkan kalender Jawa", "Bervariasi"],
-  ["Seribu hari", "Nyewu", "1000", "999"],
-] as const;
 
 export default function Home() {
   return (
@@ -135,31 +141,20 @@ export default function Home() {
               hari biasa dan Pasarannya sebagai dua siklus yang terpisah.
             </p>
 
-            <div className="table-wrap static-table-wrap">
-              <table className="education-table">
-                <caption>
-                  Ringkasan tahapan dan tambahan hari dengan metode inklusif
-                </caption>
-                <thead>
-                  <tr>
-                    <th scope="col">Tahapan</th>
-                    <th scope="col">Istilah Jawa</th>
-                    <th scope="col">Hari ke-</th>
-                    <th scope="col">Tambahan hari</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {staticRows.map((row) => (
-                    <tr key={row[1]}>
-                      <th scope="row">{row[0]}</th>
-                      <td>{row[1]}</td>
-                      <td>{row[2]}</td>
-                      <td>{row[3]}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
+            <figure className="calculation-table-figure">
+              <Image
+                src="/images/tabel-hitungan-orang-meninggal.webp"
+                alt="Tabel hitungan orang meninggal: Geblag hari ke-1, Nelung Dina hari ke-3, Mitung Dina hari ke-7, Matangpuluh hari ke-40, Nyatus hari ke-100, Pendhak Pisan, Pendhak Pindho, dan Nyewu hari ke-1000."
+                width={1536}
+                height={1024}
+                sizes="(max-width: 800px) calc(100vw - 40px), 760px"
+              />
+              <figcaption>
+                Tabel hitungan orang meninggal dengan metode inklusif, meliputi
+                tahapan, istilah Jawa, hari ke-, dan jumlah hari yang
+                ditambahkan.
+              </figcaption>
+            </figure>
             <p className="inline-note">
               Tambahan hari menggunakan metode inklusif. Jika tanggal wafat
               dihitung sebagai hari pertama, hari ke-N diperoleh dengan

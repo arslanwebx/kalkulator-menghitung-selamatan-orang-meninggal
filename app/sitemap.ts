@@ -8,6 +8,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: "https://kalkulatorselamatanorangmeninggal.pro/",
       changeFrequency: "monthly",
       priority: 1,
+      images: [
+        "https://kalkulatorselamatanorangmeninggal.pro/images/tabel-hitungan-orang-meninggal.webp",
+      ],
     },
     {
       url: "https://kalkulatorselamatanorangmeninggal.pro/tentang-kami/",

@@ -668,22 +668,27 @@ tbody tr:last-child td {
   color: var(--muted);
 }
 
-.static-table-wrap {
+.calculation-table-figure {
   margin-top: 26px;
+  margin-right: 0;
+  margin-left: 0;
 }
 
-.education-table {
-  min-width: 690px;
-  font-size: 0.84rem;
+.calculation-table-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
 }
 
-.education-table caption {
-  padding: 13px 14px;
-  background: var(--forest-soft);
-  color: var(--forest-dark);
+.calculation-table-figure figcaption {
+  margin-top: 11px;
+  padding: 0 4px;
+  color: var(--muted);
   font-size: 0.78rem;
-  font-weight: 700;
-  text-align: left;
+  line-height: 1.6;
 }
 
 .inline-note {
