@@ -70,7 +70,7 @@ function send(method, params = {}) {
   });
 }
 
-async function capture(width, height, filename) {
+async function capture(width, height, filename, url = siteUrl) {
   await send("Emulation.setDeviceMetricsOverride", {
     width,
     height,
@@ -79,7 +79,7 @@ async function capture(width, height, filename) {
     screenWidth: width,
     screenHeight: height,
   });
-  await send("Page.navigate", { url: siteUrl });
+  await send("Page.navigate", { url });
   await wait(800);
   const metrics = await send("Runtime.evaluate", {
     expression:
@@ -105,6 +105,73 @@ try {
     );
     process.stdout.write(`${width}px ${metrics}\n`);
   }
+
+  for (const page of [
+    { slug: "contact", url: `${siteUrl}hubungi-kami/` },
+    { slug: "about", url: `${siteUrl}tentang-kami/` },
+  ]) {
+    for (const width of [375, 1440]) {
+      const height = width === 1440 ? 1500 : 1800;
+      const metrics = await capture(
+        width,
+        height,
+        `visual-${page.slug}-${width}.png`,
+        page.url,
+      );
+      process.stdout.write(`${page.slug} ${width}px ${metrics}\n`);
+    }
+  }
+
+  await send("Emulation.setDeviceMetricsOverride", {
+    width: 375,
+    height: 900,
+    deviceScaleFactor: 1,
+    mobile: true,
+    screenWidth: 375,
+    screenHeight: 900,
+  });
+  await send("Page.navigate", { url: `${siteUrl}hubungi-kami/` });
+  await wait(800);
+  await send("Runtime.evaluate", {
+    expression: `(() => {
+      window.__contactFetchCalls = 0;
+      window.fetch = () => {
+        window.__contactFetchCalls += 1;
+        return new Promise((resolve) => setTimeout(() => resolve({
+          ok: true,
+          json: async () => ({ success: true })
+        }), 250));
+      };
+      const form = document.querySelector('.contact-form');
+      form.querySelector('[name="name"]').value = 'Pengguna Uji';
+      form.querySelector('[name="email"]').value = 'uji@example.com';
+      form.querySelector('[name="message"]').value = 'Pesan pengujian formulir.';
+      form.requestSubmit();
+    })()`,
+  });
+  await wait(80);
+  const ajaxLoading = await send("Runtime.evaluate", {
+    expression: `JSON.stringify({
+      path: location.pathname,
+      fetchCalls: window.__contactFetchCalls,
+      disabled: document.querySelector('.contact-form button[type="submit"]').disabled,
+      buttonText: document.querySelector('.contact-form button[type="submit"]').textContent.trim()
+    })`,
+    returnByValue: true,
+  });
+  await wait(420);
+  const ajaxFinish = await send("Runtime.evaluate", {
+    expression: `JSON.stringify({
+      path: location.pathname,
+      fetchCalls: window.__contactFetchCalls,
+      disabled: document.querySelector('.contact-form button[type="submit"]').disabled,
+      status: document.querySelector('#contact-form-status').textContent.trim(),
+      nameAfterSuccess: document.querySelector('[name="name"]').value
+    })`,
+    returnByValue: true,
+  });
+  process.stdout.write(`contact ajax loading ${ajaxLoading.result.value}\n`);
+  process.stdout.write(`contact ajax finish ${ajaxFinish.result.value}\n`);
 
   await send("Emulation.setDeviceMetricsOverride", {
     width: 375,

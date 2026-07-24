@@ -1,7 +1,8 @@
 import { Calculator } from "@/components/Calculator";
 import { Faq } from "@/components/Faq";
-import { Logo } from "@/components/Logo";
 import { CheckIcon } from "@/components/icons";
+import { SiteFooter } from "@/components/SiteFooter";
+import { SiteHeader } from "@/components/SiteHeader";
 import { faqs, glossary } from "@/data/content";
 import {
   calculateSchedule,
@@ -97,31 +98,15 @@ export default function Home() {
         Lewati ke konten utama
       </a>
 
-      <header className="site-header">
-        <div className="header-inner">
-          <a href="#" className="brand-link" aria-label="Kalkulator Selamatan, beranda">
-            <Logo />
-          </a>
-          <nav aria-label="Navigasi utama">
-            <a href="#kalkulator">Kalkulator</a>
-            <a href="#tabel-hitungan">Tabel Hitungan</a>
-            <a href="#cara-menghitung">Cara Menghitung</a>
-            <a href="#faq">FAQ</a>
-          </nav>
-          <a className="mobile-calculate-link" href="#kalkulator">
-            Hitung Sekarang
-          </a>
-        </div>
-      </header>
+      <SiteHeader homePage />
 
       <main id="main-content">
         <section className="intro">
           <h1>Kalkulator Menghitung Selamatan Orang Meninggal</h1>
-          <p>
+          <p className="intro-copy">
             Masukkan tanggal wafat untuk menghitung jadwal selamatan 3, 7, 40,
             100, Pendhak, dan 1000 hari secara otomatis.
-          </p>
-          <p>
+            <br />
             Hasil menampilkan tanggal Masehi, hari, dan Pasaran Jawa dengan
             metode tanggal wafat sebagai hari pertama.
           </p>
@@ -406,27 +391,7 @@ export default function Home() {
         </div>
       </main>
 
-      <footer className="site-footer">
-        <div className="footer-inner">
-          <div>
-            <Logo />
-            <p>
-              Alat bantu menghitung jadwal selamatan, hari, dan Pasaran Jawa
-              langsung di perangkat Anda.
-            </p>
-          </div>
-          <nav aria-label="Navigasi footer">
-            <a href="#kalkulator">Kalkulator</a>
-            <a href="#tabel-hitungan">Tabel Hitungan</a>
-            <a href="#cara-menghitung">Cara Menghitung</a>
-            <a href="#faq">FAQ</a>
-          </nav>
-        </div>
-        <div className="footer-bottom">
-          <span>© {new Date().getFullYear()} Kalkulator Selamatan</span>
-          <span>kalkulatorselamatanorangmeninggal.pro</span>
-        </div>
-      </footer>
+      <SiteFooter homePage />
 
       <script
         type="application/ld+json"

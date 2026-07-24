@@ -9,5 +9,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 1,
     },
+    {
+      url: "https://kalkulatorselamatanorangmeninggal.pro/tentang-kami/",
+      changeFrequency: "yearly",
+      priority: 0.6,
+    },
+    {
+      url: "https://kalkulatorselamatanorangmeninggal.pro/hubungi-kami/",
+      changeFrequency: "yearly",
+      priority: 0.5,
+    },
   ];
 }
