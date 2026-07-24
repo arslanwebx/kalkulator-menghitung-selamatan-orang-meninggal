@@ -144,8 +144,41 @@ a {
   color: var(--forest);
 }
 
-.mobile-contact-link {
+.mobile-menu-button,
+.mobile-navigation {
   display: none;
+}
+
+.mobile-menu-button {
+  width: 44px;
+  height: 44px;
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--white);
+  color: var(--forest-dark);
+}
+
+.mobile-menu-button span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  margin: 4px auto;
+  border-radius: 999px;
+  background: currentColor;
+  transition: transform 160ms ease, opacity 160ms ease;
+}
+
+.mobile-menu-button[aria-expanded="true"] span:first-child {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.mobile-menu-button[aria-expanded="true"] span:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-menu-button[aria-expanded="true"] span:last-child {
+  transform: translateY(-6px) rotate(-45deg);
 }
 
 .nav-contact-button {
@@ -2022,21 +2055,49 @@ tbody tr:last-child td {
 }
 
 @media (max-width: 940px) {
-  .header-inner nav {
+  .header-inner .desktop-navigation {
     display: none;
   }
 
-  .mobile-contact-link {
+  .mobile-menu-button {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
+  }
+
+  .mobile-navigation.is-open {
+    display: block;
+    border-top: 1px solid var(--line);
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 12px 25px rgba(23, 76, 58, 0.08);
+  }
+
+  .mobile-navigation > div {
+    display: grid;
+    width: min(1120px, calc(100% - 40px));
+    margin: 0 auto;
+    padding: 12px 0 18px;
+    gap: 4px;
+  }
+
+  .mobile-navigation a {
+    display: flex;
+    align-items: center;
     min-height: 44px;
-    padding: 8px 12px;
+    padding: 9px 4px;
+    border-bottom: 1px solid rgba(23, 76, 58, 0.1);
+    color: var(--forest-dark);
+    font-size: 0.93rem;
+    font-weight: 700;
+  }
+
+  .mobile-navigation .mobile-nav-contact {
+    justify-content: center;
+    margin-top: 10px;
+    border: 0;
     border-radius: 7px;
     background: var(--forest);
     color: var(--white);
-    font-size: 0.78rem;
-    font-weight: 700;
-    text-decoration: none;
   }
 
   .example-grid {
@@ -2075,6 +2136,10 @@ tbody tr:last-child td {
   .content-flow,
   .footer-inner,
   .footer-bottom {
+    width: min(100% - 28px, 1120px);
+  }
+
+  .mobile-navigation > div {
     width: min(100% - 28px, 1120px);
   }
 
