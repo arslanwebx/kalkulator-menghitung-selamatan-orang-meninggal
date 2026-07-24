@@ -1218,6 +1218,105 @@ tbody tr:last-child td {
   margin: 0 auto;
 }
 
+.policy-page-hero {
+  padding-bottom: 42px;
+}
+
+.policy-layout {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.55fr) minmax(0, 1.45fr);
+  align-items: start;
+  gap: clamp(30px, 6vw, 72px);
+}
+
+.policy-summary {
+  position: sticky;
+  top: 100px;
+  padding: 25px;
+  border: 1px solid #cfe1d7;
+  border-top: 4px solid var(--forest);
+  border-radius: 12px;
+  background: var(--forest-soft);
+}
+
+.policy-summary strong,
+.policy-summary span,
+.policy-summary time {
+  display: block;
+}
+
+.policy-summary strong {
+  margin-bottom: 10px;
+  color: var(--forest-dark);
+  font-size: 1.05rem;
+}
+
+.policy-summary p {
+  margin: 0 0 22px;
+  color: #355a4a;
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+.policy-summary span {
+  padding-top: 18px;
+  border-top: 1px solid #c5d9ce;
+  color: var(--muted);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.policy-summary time {
+  margin-top: 4px;
+  color: var(--forest-dark);
+  font-size: 0.86rem;
+  font-weight: 700;
+}
+
+.policy-content {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--white);
+  box-shadow: var(--shadow);
+}
+
+.policy-content section {
+  padding: clamp(26px, 5vw, 42px);
+  border-bottom: 1px solid var(--line);
+}
+
+.policy-content section:last-child {
+  border-bottom: 0;
+}
+
+.policy-content h2 {
+  margin: 0 0 14px;
+  color: var(--forest-dark);
+  font-size: clamp(1.25rem, 3vw, 1.65rem);
+  letter-spacing: -0.025em;
+  line-height: 1.35;
+}
+
+.policy-content p {
+  margin: 0 0 14px;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.policy-content p:last-child {
+  margin-bottom: 0;
+}
+
+.policy-content a {
+  color: var(--forest);
+  font-weight: 700;
+  overflow-wrap: anywhere;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 .about-lead {
   display: grid;
   grid-template-columns: minmax(0, 1.55fr) minmax(280px, 0.75fr);
@@ -1641,9 +1740,14 @@ tbody tr:last-child td {
   }
 
   .about-lead,
-  .about-method {
+  .about-method,
+  .policy-layout {
     grid-template-columns: 1fr;
     gap: 34px;
+  }
+
+  .policy-summary {
+    position: static;
   }
 
   .about-section {

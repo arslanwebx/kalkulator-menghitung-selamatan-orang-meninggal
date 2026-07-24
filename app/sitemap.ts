@@ -19,5 +19,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "yearly",
       priority: 0.5,
     },
+    {
+      url: "https://kalkulatorselamatanorangmeninggal.pro/kebijakan-privasi/",
+      changeFrequency: "yearly",
+      priority: 0.3,
+    },
+    {
+      url: "https://kalkulatorselamatanorangmeninggal.pro/syarat-dan-ketentuan/",
+      changeFrequency: "yearly",
+      priority: 0.3,
+    },
+    {
+      url: "https://kalkulatorselamatanorangmeninggal.pro/penafian/",
+      changeFrequency: "yearly",
+      priority: 0.3,
+    },
   ];
 }
