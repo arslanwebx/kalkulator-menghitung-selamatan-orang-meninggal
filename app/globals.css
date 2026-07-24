@@ -1479,6 +1479,114 @@ tbody tr:last-child td {
   margin: 0 auto;
 }
 
+.sitemap-page-hero {
+  padding-bottom: 42px;
+}
+
+.html-sitemap {
+  max-width: 980px;
+}
+
+.sitemap-group {
+  display: grid;
+  grid-template-columns: minmax(210px, 0.7fr) minmax(0, 1.5fr);
+  padding: clamp(32px, 6vw, 58px) 0;
+  gap: clamp(32px, 6vw, 72px);
+  border-top: 1px solid var(--line);
+}
+
+.sitemap-group-heading h2,
+.sitemap-xml-note h2 {
+  margin: 0 0 11px;
+  color: var(--forest-dark);
+  font-size: clamp(1.35rem, 3vw, 1.75rem);
+  letter-spacing: -0.03em;
+  line-height: 1.3;
+}
+
+.sitemap-group-heading p,
+.sitemap-xml-note p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.7;
+}
+
+.sitemap-group ul {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  gap: 11px;
+  list-style: none;
+}
+
+.sitemap-group a {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  padding: 18px 20px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--white);
+  box-shadow: 0 6px 20px rgba(23, 76, 58, 0.035);
+  transition: border-color 160ms ease, transform 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.sitemap-group a:hover {
+  border-color: #9ab9aa;
+  box-shadow: 0 9px 25px rgba(23, 76, 58, 0.07);
+  transform: translateY(-1px);
+}
+
+.sitemap-group a span {
+  color: var(--forest-dark);
+  font-size: 0.95rem;
+  font-weight: 750;
+}
+
+.sitemap-group a small {
+  grid-column: 1;
+  margin-top: 5px;
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.55;
+}
+
+.sitemap-group a strong {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  align-self: center;
+  margin-left: 20px;
+  color: var(--forest);
+  font-size: 1.1rem;
+}
+
+.sitemap-xml-note {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0 0;
+  padding: clamp(25px, 5vw, 38px);
+  gap: 35px;
+  border-radius: 12px;
+  background: var(--forest-soft);
+}
+
+.sitemap-xml-note a {
+  flex: 0 0 auto;
+  padding: 11px 16px;
+  border: 1px solid var(--forest);
+  border-radius: 7px;
+  color: var(--forest);
+  font-size: 0.82rem;
+  font-weight: 750;
+}
+
+.sitemap-xml-note a:hover {
+  background: var(--forest);
+  color: var(--white);
+}
+
 .policy-page-hero {
   padding-bottom: 42px;
 }
@@ -2003,9 +2111,19 @@ tbody tr:last-child td {
   .about-lead,
   .about-method,
   .policy-layout,
-  .author-biography {
+  .author-biography,
+  .sitemap-group {
     grid-template-columns: 1fr;
     gap: 34px;
+  }
+
+  .sitemap-xml-note {
+    display: block;
+  }
+
+  .sitemap-xml-note a {
+    display: inline-block;
+    margin-top: 20px;
   }
 
   .author-profile-hero {

@@ -23,6 +23,7 @@ export function SiteFooter() {
           <ul>
             <li><Link href="/tentang-kami/">Tentang Kami</Link></li>
             <li><Link href="/hubungi-kami/">Hubungi Kami</Link></li>
+            <li><Link href="/peta-situs/">Peta Situs</Link></li>
             <li><Link href="/kebijakan-privasi/">Kebijakan Privasi</Link></li>
             <li><Link href="/kebijakan-cookie/">Kebijakan Cookie</Link></li>
             <li><Link href="/kebijakan-editorial/">Kebijakan Editorial</Link></li>

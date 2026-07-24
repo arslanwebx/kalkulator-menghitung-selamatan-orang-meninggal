@@ -23,6 +23,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.5,
     },
     {
+      url: "https://kalkulatorselamatanorangmeninggal.pro/peta-situs/",
+      changeFrequency: "monthly",
+      priority: 0.5,
+    },
+    {
       url: "https://kalkulatorselamatanorangmeninggal.pro/penulis/rizky-pratama/",
       changeFrequency: "monthly",
       priority: 0.6,
