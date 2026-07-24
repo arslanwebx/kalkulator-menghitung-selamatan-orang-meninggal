@@ -12,7 +12,7 @@ import {
 
 const canonicalUrl = "https://kalkulatorselamatanorangmeninggal.pro/";
 const description =
-  "Hitung jadwal selamatan 3, 7, 40, 100, pendhak, dan 1000 hari dari tanggal wafat, lengkap dengan hari dan pasaran Jawa secara online lebih mudah.";
+  "Hitung jadwal selamatan orang meninggal dengan mudah berdasarkan tradisi Jawa, mulai dari 3 hari, 7 hari, 40 hari, 100 hari, hingga 1000 hari.";
 const parsedExampleDate = parseDateInput("2025-02-14");
 
 if (!parsedExampleDate) {
@@ -40,7 +40,7 @@ const schema = {
     {
       "@type": "WebPage",
       "@id": `${canonicalUrl}#webpage`,
-      name: "Kalkulator Menghitung Selamatan Orang Meninggal Jawa",
+      name: "Kalkulator Menghitung Selamatan Orang Meninggal - (Online)",
       description,
       url: canonicalUrl,
       inLanguage: "id-ID",
