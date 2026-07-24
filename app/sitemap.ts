@@ -23,6 +23,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.5,
     },
     {
+      url: "https://kalkulatorselamatanorangmeninggal.pro/penulis/rizky-pratama/",
+      changeFrequency: "monthly",
+      priority: 0.6,
+      images: [
+        "https://kalkulatorselamatanorangmeninggal.pro/images/rizky-pratama.webp",
+      ],
+    },
+    {
       url: "https://kalkulatorselamatanorangmeninggal.pro/kebijakan-privasi/",
       changeFrequency: "yearly",
       priority: 0.3,

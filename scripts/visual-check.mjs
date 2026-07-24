@@ -109,6 +109,7 @@ try {
   for (const page of [
     { slug: "contact", url: `${siteUrl}hubungi-kami/` },
     { slug: "about", url: `${siteUrl}tentang-kami/` },
+    { slug: "author", url: `${siteUrl}penulis/rizky-pratama/` },
   ]) {
     for (const width of [375, 1440]) {
       const height = width === 1440 ? 1900 : 3000;

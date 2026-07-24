@@ -1,10 +1,16 @@
 import Image from "next/image";
 
+import { AuthorBox } from "@/components/AuthorBox";
 import { Calculator } from "@/components/Calculator";
 import { Faq } from "@/components/Faq";
 import { CheckIcon } from "@/components/icons";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
+import {
+  createArticleNode,
+  createPersonSchema,
+  getAuthorUrl,
+} from "@/data/authors";
 import { faqs, glossary } from "@/data/content";
 import {
   calculateSchedule,
@@ -50,7 +56,15 @@ const schema = {
       isPartOf: { "@id": `${canonicalUrl}#website` },
       mainEntity: { "@id": `${canonicalUrl}#application` },
       primaryImageOfPage: { "@id": `${canonicalUrl}#tabel-hitungan-image` },
+      author: { "@id": `${getAuthorUrl()}#person` },
     },
+    createPersonSchema(),
+    createArticleNode({
+      headline: "Kalkulator Menghitung Selamatan Orang Meninggal",
+      description,
+      url: canonicalUrl,
+      image: `${canonicalUrl}images/tabel-hitungan-orang-meninggal.webp`,
+    }),
     {
       "@type": "ImageObject",
       "@id": `${canonicalUrl}#tabel-hitungan-image`,
@@ -369,6 +383,8 @@ export default function Home() {
               </li>
             </ul>
           </section>
+
+          <AuthorBox />
 
           <aside className="closing-notice" aria-label="Catatan penggunaan">
             <div>
