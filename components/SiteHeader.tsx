@@ -18,7 +18,7 @@ export function SiteHeader({ homePage = false }: SiteHeaderProps) {
     { href: anchor("faq"), label: "FAQ" },
     {
       href: "/panduan/cara-menghitung-7-hari-orang-meninggal/",
-      label: "Blog",
+      label: "Panduan",
     },
     { href: "/tentang-kami/", label: "Tentang Kami" },
   ];
