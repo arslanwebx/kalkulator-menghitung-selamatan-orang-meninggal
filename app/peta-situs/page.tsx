@@ -38,6 +38,12 @@ const sitemapGroups = [
           "Langkah menggunakan metode inklusif dan memeriksa hasil.",
       },
       {
+        href: "/panduan/cara-menghitung-7-hari-orang-meninggal/",
+        label: "Cara Menghitung 7 Hari Orang Meninggal",
+        description:
+          "Panduan Mitung Dina dengan metode inklusif dan contoh tanggal.",
+      },
+      {
         href: "/#faq",
         label: "Pertanyaan Umum",
         description:

@@ -53,6 +53,8 @@ In future sessions, when I say "write article #[N]" or "write [slug]", read `CON
 ## CLUSTER 1 — Core Calculation & Metode
 
 ### 1. cara menghitung 7 hari orang meninggal 🔧
+
+- **Status:** Done
 - **Title:** Cara Menghitung 7 Hari Orang Meninggal (Mitung Dina) | Kalkulator Selamatan
 - **Meta:** Cara menghitung 7 hari kematian dengan metode inklusif dan contoh tanggal nyata. Cek otomatis dengan kalkulator selamatan.
 - **Slug:** /panduan/cara-menghitung-7-hari-orang-meninggal/

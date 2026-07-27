@@ -17,6 +17,12 @@ export const rizkyPratama = {
   ],
   articles: [
     {
+      title: "Cara Menghitung 7 Hari Orang Meninggal (Mitung Dina)",
+      description:
+        "Panduan menghitung Mitung Dina dengan metode inklusif, rumus tambah 6 hari, dan contoh tanggal.",
+      path: "/panduan/cara-menghitung-7-hari-orang-meninggal/",
+    },
+    {
       title: "Kalkulator Menghitung Selamatan Orang Meninggal",
       description:
         "Panduan dan kalkulator untuk menghitung jadwal 3, 7, 40, 100, Pendhak, dan 1000 hari beserta Pasaran Jawa.",

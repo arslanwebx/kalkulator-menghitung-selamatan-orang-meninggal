@@ -28,6 +28,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.5,
     },
     {
+      url: "https://kalkulatorselamatanorangmeninggal.pro/panduan/cara-menghitung-7-hari-orang-meninggal/",
+      lastModified: new Date("2026-07-27"),
+      changeFrequency: "monthly",
+      priority: 0.8,
+      images: [
+        "https://kalkulatorselamatanorangmeninggal.pro/images/cara-menghitung-7-hari-orang-meninggal.webp",
+      ],
+    },
+    {
       url: "https://kalkulatorselamatanorangmeninggal.pro/penulis/rizky-pratama/",
       changeFrequency: "monthly",
       priority: 0.6,
