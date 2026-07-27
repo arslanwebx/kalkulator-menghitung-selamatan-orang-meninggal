@@ -38,6 +38,12 @@ const sitemapGroups = [
           "Langkah menggunakan metode inklusif dan memeriksa hasil.",
       },
       {
+        href: "/panduan/",
+        label: "Panduan Selamatan Jawa",
+        description:
+          "Kumpulan artikel dan panduan perhitungan selamatan Jawa.",
+      },
+      {
         href: "/panduan/cara-menghitung-7-hari-orang-meninggal/",
         label: "Cara Menghitung 7 Hari Orang Meninggal",
         description:

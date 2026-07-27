@@ -37,6 +37,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       ],
     },
     {
+      url: "https://kalkulatorselamatanorangmeninggal.pro/panduan/",
+      changeFrequency: "weekly",
+      priority: 0.7,
+    },
+    {
       url: "https://kalkulatorselamatanorangmeninggal.pro/penulis/rizky-pratama/",
       changeFrequency: "monthly",
       priority: 0.6,
