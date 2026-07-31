@@ -14,7 +14,7 @@ export function SiteHeader({ homePage = false }: SiteHeaderProps) {
   const anchor = (id: string) => (homePage ? `#${id}` : `/#${id}`);
   const menuLinks = [
     { href: anchor("kalkulator"), label: "Kalkulator" },
-    { href: anchor("tabel-hitungan"), label: "Tabel Hitungan" },
+    { href: "/tabel-hitungan-orang-meninggal/", label: "Tabel Hitungan" },
     { href: anchor("faq"), label: "FAQ" },
     {
       href: "/panduan/",

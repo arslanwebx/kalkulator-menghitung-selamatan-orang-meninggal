@@ -65,7 +65,7 @@ export default function PanduanPage() {
             {guides.map((guide) => (
               <article className="guide-card" key={guide.path}>
                 <Link href={guide.path} className="guide-card-image" aria-label={`Baca ${guide.title}`}>
-                  <Image src="/images/cara-menghitung-7-hari-orang-meninggal.webp" alt="Kalender Mitung Dina untuk menghitung hari ke-7" width={1536} height={1024} sizes="(max-width: 700px) calc(100vw - 56px), (max-width: 1100px) calc(50vw - 36px), 350px" />
+                  <Image src={guide.imagePath} alt={guide.imageAlt} width={1536} height={1024} sizes="(max-width: 700px) calc(100vw - 56px), (max-width: 1100px) calc(50vw - 36px), 350px" />
                 </Link>
                 <div className="guide-card-content">
                   <p>Perhitungan tanggal</p>

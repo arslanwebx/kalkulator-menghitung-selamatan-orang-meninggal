@@ -26,10 +26,10 @@ const sitemapGroups = [
           "Hitung jadwal 3, 7, 40, 100, Pendhak, dan 1000 hari.",
       },
       {
-        href: "/#tabel-hitungan",
+        href: "/tabel-hitungan-orang-meninggal/",
         label: "Tabel Hitungan Orang Meninggal",
         description:
-          "Ringkasan tahapan, istilah Jawa, dan tambahan hari.",
+          "Tabel lengkap tahapan, istilah Jawa, hari ke-, dan tambahan hari.",
       },
       {
         href: "/#cara-menghitung",

@@ -1533,6 +1533,128 @@ tbody tr:last-child td {
 .article-references { margin: 48px 0 0; padding: 25px; border-radius: 12px; background: #f6f8f5; }
 .article-references h2 { margin-top: 0; font-size: 1.3rem; }
 
+.table-teaser .button {
+  margin-top: 10px;
+}
+
+.table-reference-hero {
+  width: min(900px, calc(100% - 40px));
+}
+
+.table-reference-hero > p:not(.article-meta) a {
+  color: var(--forest);
+  font-weight: 700;
+}
+
+.table-reference-article {
+  width: min(1120px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+.table-reference-section {
+  width: min(820px, 100%);
+  margin: 0 auto;
+  padding: 50px 0;
+  color: #315447;
+  line-height: 1.8;
+}
+
+.table-reference-section + .table-reference-section {
+  border-top: 1px solid var(--line);
+}
+
+.table-reference-section > h2,
+.table-calculator-cta h2 {
+  margin: 0 0 16px;
+  color: var(--forest-dark);
+  font-size: clamp(1.55rem, 3.5vw, 2.1rem);
+  letter-spacing: -0.035em;
+  line-height: 1.3;
+}
+
+.table-reference-section > p {
+  margin: 0 0 16px;
+}
+
+.table-reference-section a {
+  color: var(--forest);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.table-reference-wrap,
+.table-reference-image {
+  width: min(1120px, calc(100vw - 40px));
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+.table-reference-wrap {
+  margin-top: 26px;
+}
+
+.reference-table {
+  min-width: 940px;
+}
+
+.reference-table caption {
+  padding: 12px 14px;
+  background: var(--forest-soft);
+  color: var(--forest-dark);
+  font-size: 0.82rem;
+  font-weight: 750;
+  text-align: left;
+}
+
+.reference-table tr.approximate {
+  background: var(--gold-soft);
+}
+
+.table-reference-image {
+  margin-top: 30px;
+  margin-right: 0;
+  margin-bottom: 0;
+}
+
+.table-calculator-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: min(920px, 100%);
+  margin: 18px auto;
+  padding: clamp(24px, 4vw, 36px);
+  gap: 30px;
+  border-radius: 14px;
+  background: var(--forest-soft);
+}
+
+.table-calculator-cta h2 {
+  margin-bottom: 8px;
+  font-size: clamp(1.35rem, 3vw, 1.8rem);
+}
+
+.table-calculator-cta p {
+  max-width: 610px;
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.table-calculator-cta .button {
+  flex: 0 0 auto;
+}
+
+.table-mistakes {
+  margin-top: 24px;
+}
+
+.table-reference-article > .author-box {
+  width: min(820px, 100%);
+  margin-right: auto;
+  margin-left: auto;
+}
+
 .inner-page-hero {
   width: min(820px, calc(100% - 40px));
   margin: 0 auto;
@@ -2186,6 +2308,39 @@ tbody tr:last-child td {
 }
 
 @media (max-width: 700px) {
+  .table-reference-article,
+  .table-reference-hero {
+    width: min(100% - 28px, 1120px);
+  }
+
+  .table-reference-wrap,
+  .table-reference-image {
+    width: 100%;
+    margin-left: 0;
+    transform: none;
+  }
+
+  .reference-table caption {
+    display: block;
+    width: 100%;
+  }
+
+  .reference-table th,
+  .reference-table td {
+    grid-template-columns: minmax(88px, 100px) minmax(0, 1fr);
+    overflow-wrap: anywhere;
+  }
+
+  .table-calculator-cta {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .table-calculator-cta .button {
+    width: 100%;
+    justify-content: center;
+  }
+
   .guides-shell {
     width: min(100% - 28px, 1120px);
   }
@@ -2389,6 +2544,37 @@ tbody tr:last-child td {
     color: var(--muted);
     font-size: 0.68rem;
     font-weight: 700;
+  }
+
+  .table-reference-wrap {
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .result-table.reference-table {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .result-table.reference-table caption {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
+  .result-table.reference-table th,
+  .result-table.reference-table td {
+    grid-template-columns: 92px minmax(0, 1fr);
+    min-width: 0;
+  }
+
+  .result-table.reference-table th > span,
+  .result-table.reference-table td > span {
+    min-width: 0;
+    overflow-wrap: anywhere;
   }
 
   .result-actions .button {

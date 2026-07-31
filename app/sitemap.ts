@@ -9,13 +9,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 1,
       images: [
-        "https://kalkulatorselamatanorangmeninggal.pro/images/tabel-hitungan-orang-meninggal.webp",
+        "https://kalkulatorselamatanorangmeninggal.pro/og-image.svg",
       ],
     },
     {
       url: "https://kalkulatorselamatanorangmeninggal.pro/tentang-kami/",
       changeFrequency: "yearly",
       priority: 0.6,
+    },
+    {
+      url: "https://kalkulatorselamatanorangmeninggal.pro/tabel-hitungan-orang-meninggal/",
+      lastModified: new Date("2026-07-31"),
+      changeFrequency: "monthly",
+      priority: 0.9,
+      images: [
+        "https://kalkulatorselamatanorangmeninggal.pro/images/tabel-hitungan-orang-meninggal.webp",
+      ],
     },
     {
       url: "https://kalkulatorselamatanorangmeninggal.pro/hubungi-kami/",

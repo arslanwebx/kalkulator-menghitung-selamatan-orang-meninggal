@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Link from "next/link";
 
 import { AuthorBox } from "@/components/AuthorBox";
 import { Calculator } from "@/components/Calculator";
@@ -55,7 +55,7 @@ const schema = {
       inLanguage: "id-ID",
       isPartOf: { "@id": `${canonicalUrl}#website` },
       mainEntity: { "@id": `${canonicalUrl}#application` },
-      primaryImageOfPage: { "@id": `${canonicalUrl}#tabel-hitungan-image` },
+      primaryImageOfPage: { "@id": `${canonicalUrl}#primary-image` },
       author: { "@id": `${getAuthorUrl()}#person` },
     },
     createPersonSchema(),
@@ -63,19 +63,19 @@ const schema = {
       headline: "Kalkulator Menghitung Selamatan Orang Meninggal",
       description,
       url: canonicalUrl,
-      image: `${canonicalUrl}images/tabel-hitungan-orang-meninggal.webp`,
+      image: `${canonicalUrl}og-image.svg`,
     }),
     {
       "@type": "ImageObject",
-      "@id": `${canonicalUrl}#tabel-hitungan-image`,
-      name: "Tabel Hitungan Orang Meninggal",
+      "@id": `${canonicalUrl}#primary-image`,
+      name: "Kalkulator Selamatan",
       caption:
-        "Tabel hitungan orang meninggal dengan tahapan selamatan, istilah Jawa, hari ke-, tambahan hari, dan keterangan metode inklusif.",
-      contentUrl: `${canonicalUrl}images/tabel-hitungan-orang-meninggal.webp`,
-      url: `${canonicalUrl}images/tabel-hitungan-orang-meninggal.webp`,
-      width: 1536,
-      height: 1024,
-      encodingFormat: "image/webp",
+        "Kalkulator untuk menghitung jadwal selamatan dan Pasaran Jawa.",
+      contentUrl: `${canonicalUrl}og-image.svg`,
+      url: `${canonicalUrl}og-image.svg`,
+      width: 1200,
+      height: 630,
+      encodingFormat: "image/svg+xml",
       inLanguage: "id-ID",
       representativeOfPage: true,
     },
@@ -137,43 +137,17 @@ export default function Home() {
         </div>
 
         <div className="content-flow">
-          <section id="tabel-hitungan" className="content-section">
+          <section className="content-section table-teaser">
             <h2>Tabel Hitungan Orang Meninggal</h2>
             <p>
-              Pada metode bawaan, tanggal wafat masuk sebagai hari pertama.
-              Hitungan ini membuat Nelung Dina jatuh dua hari kalender sesudah
-              tanggal wafat.
+              Tabel lengkap merangkum tahapan selamatan, istilah Jawa, hari ke-,
+              dan tambahan hari dalam metode inklusif. Gunakan tabel sebagai
+              rujukan cepat untuk memeriksa hitungan manual dan memahami urutan
+              Geblag hingga Nyewu.
             </p>
-            <p>
-              Prinsip yang sama berlaku untuk tahapan lain: hari ketujuh memakai
-              tambahan enam hari, sedangkan hari ke-1000 memakai tambahan 999
-              hari.
-            </p>
-            <p>
-              Tabel ini juga dapat dipakai untuk memeriksa hasil hitungan manual.
-              Cocokkan jumlah hari yang ditambahkan terlebih dahulu, lalu periksa
-              hari biasa dan Pasarannya sebagai dua siklus yang terpisah.
-            </p>
-
-            <figure className="calculation-table-figure">
-              <Image
-                src="/images/tabel-hitungan-orang-meninggal.webp"
-                alt="Tabel hitungan orang meninggal dengan metode inklusif: Geblag hari ke-1, Nelung Dina hari ke-3, Mitung Dina hari ke-7, Matangpuluh hari ke-40, Nyatus hari ke-100, Pendhak Pisan sekitar 354 hari, Pendhak Pindho sekitar 708 hari, dan Nyewu hari ke-1000."
-                width={1536}
-                height={1024}
-                sizes="(max-width: 800px) calc(100vw - 40px), 760px"
-              />
-              <figcaption>
-                Tabel hitungan orang meninggal dengan metode inklusif, meliputi
-                tahapan, istilah Jawa, hari ke-, tambahan hari, dan keterangan
-                untuk setiap tahapan.
-              </figcaption>
-            </figure>
-            <p className="inline-note">
-              Tambahan hari menggunakan metode inklusif. Jika tanggal wafat
-              dihitung sebagai hari pertama, hari ke-N diperoleh dengan
-              menambahkan N−1 hari.
-            </p>
+            <Link className="button button-secondary" href="/tabel-hitungan-orang-meninggal/">
+              Lihat tabel hitungan orang meninggal lengkap
+            </Link>
           </section>
 
           <section id="cara-menghitung" className="content-section">

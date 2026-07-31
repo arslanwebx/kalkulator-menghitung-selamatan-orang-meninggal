@@ -21,6 +21,7 @@ export function SiteFooter() {
         <div className="footer-links-column">
           <h2>Informasi</h2>
           <ul>
+            <li><Link href="/tabel-hitungan-orang-meninggal/">Tabel Hitungan</Link></li>
             <li><Link href="/tentang-kami/">Tentang Kami</Link></li>
             <li><Link href="/hubungi-kami/">Hubungi Kami</Link></li>
             <li><Link href="/peta-situs/">Peta Situs</Link></li>

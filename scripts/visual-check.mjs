@@ -111,6 +111,10 @@ try {
     { slug: "about", url: `${siteUrl}tentang-kami/` },
     { slug: "author", url: `${siteUrl}penulis/rizky-pratama/` },
     { slug: "sitemap", url: `${siteUrl}peta-situs/` },
+    {
+      slug: "table-reference",
+      url: `${siteUrl}tabel-hitungan-orang-meninggal/`,
+    },
   ]) {
     for (const width of [375, 1440]) {
       const height = width === 1440 ? 1900 : 3000;

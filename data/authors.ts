@@ -17,16 +17,29 @@ export const rizkyPratama = {
   ],
   articles: [
     {
+      title: "Tabel Hitungan Orang Meninggal Lengkap",
+      description:
+        "Tabel tahapan selamatan Jawa, istilah, hari ke-, dan tambahan hari dengan metode inklusif.",
+      path: "/tabel-hitungan-orang-meninggal/",
+      imagePath: "/images/tabel-hitungan-orang-meninggal.webp",
+      imageAlt:
+        "Tabel hitungan orang meninggal lengkap dengan tahapan selamatan Jawa",
+    },
+    {
       title: "Cara Menghitung 7 Hari Orang Meninggal (Mitung Dina)",
       description:
         "Panduan menghitung Mitung Dina dengan metode inklusif, rumus tambah 6 hari, dan contoh tanggal.",
       path: "/panduan/cara-menghitung-7-hari-orang-meninggal/",
+      imagePath: "/images/cara-menghitung-7-hari-orang-meninggal.webp",
+      imageAlt: "Kalender Mitung Dina untuk menghitung hari ke-7",
     },
     {
       title: "Kalkulator Menghitung Selamatan Orang Meninggal",
       description:
         "Panduan dan kalkulator untuk menghitung jadwal 3, 7, 40, 100, Pendhak, dan 1000 hari beserta Pasaran Jawa.",
       path: "/",
+      imagePath: "/og-image.svg",
+      imageAlt: "Kalkulator Selamatan dengan Pasaran Jawa",
     },
   ],
 } as const;
